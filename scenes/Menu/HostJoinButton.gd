@@ -4,6 +4,7 @@ const PORT = 4242
 const MAX_PLAYERS = 8
 
 var peer
+var my_id
 
 func _pressed():
 	# TODO: close server / client first
@@ -14,6 +15,7 @@ func _pressed():
 		join(input)
 	# TODO: change scene if success
 	# test change
+	my_id = get_tree().get_network_unique_id()
 	get_tree().change_scene("res://scenes/World/World.tscn")
 
 func host():

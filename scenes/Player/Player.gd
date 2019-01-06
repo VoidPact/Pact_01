@@ -1,5 +1,14 @@
 extends KinematicBody2D
 
+var id
+var info
+
+func init(id, info):
+	set_name(id)
+	id = id
+	info = info
+	
+
 func _physics_process(delta):
 	handle_movement()
 
