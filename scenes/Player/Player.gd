@@ -4,14 +4,12 @@ var id
 var info
 
 func init(id, info):
-	set_name(id)
+	set_name(str(id))
 	id = id
 	info = info
-	
 
-func _physics_process(delta):
-	handle_movement()
-
+# This is really bad
+# RPCs should probably be by themselves and only call necessary stuff (e.g. set position)
 func handle_movement():
 	if Input.is_action_pressed("move_left"):
 		rpc("move", position.x - 10)
