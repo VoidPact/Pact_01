@@ -26,7 +26,7 @@ remote func register_peer(id, info):
 	new_player(id, info)
 	
 	# hehe
-	$Label.text = peer_infos[id][name] + " is your friend"
+	$Label.text = info[name] + " is your friend"
 
 func new_player(id, info):
 	var player = preload("res://scenes/Player/Player.tscn").instance()
