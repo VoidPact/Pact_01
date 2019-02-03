@@ -16,20 +16,17 @@ func _ready():
 
 func _peer_connected(id):
 	rpc_id(id,"register_peer", my_id, my_info)
-	
-	# hehe
-	$Label.text = peer_infos[id][name] + " has joined"
 
 func _peer_disconnected(id):
 	peer_infos.erase(id)
 	remove_child(get_node(str(id))) # Memory leak, make delete_player(id)?
-	
-	# hehe
-	$Label.text = peer_infos[id][name] + " has left"
 
 remote func register_peer(id, info):
 	peer_infos[id] = info
 	new_player(id, info)
+	
+	# hehe
+	$Label.text = peer_infos[id][name] + " is your friend"
 
 func new_player(id, info):
 	var player = preload("res://scenes/Player/Player.tscn").instance()
