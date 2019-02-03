@@ -51,5 +51,8 @@ func handle_movement():
 		
 	
 	move_and_slide(velocity, FLOOR_NORMAL)
+	rpc("update_position", position.x, position.y)
 	
-	
+remote func update_position(xpos,ypos):
+	position.x = xpos
+	position.y = ypos
