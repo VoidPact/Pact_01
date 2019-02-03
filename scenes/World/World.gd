@@ -32,3 +32,4 @@ func new_player(id, info):
 # Move to some sort of player controller?
 func _physics_process(delta):
 	get_node(str(my_id)).handle_movement()
+	

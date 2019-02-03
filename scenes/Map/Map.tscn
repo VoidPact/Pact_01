@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scenes/Map/brick.tres" type="TileSet" id=1]
 
-[node name="Map" type="TileMap"]
+[node name="Map" type="TileMap" index="0"]
 
 mode = 0
 tile_set = ExtResource( 1 )
