@@ -5,7 +5,7 @@ extends KinematicBody2D
 const XINIT = 500
 const YINIT = 200
 
-const ACCEL = 100
+export var ACCEL = 200
 const MAX_X_SPEED = 500
 
 const GRAV = 50
